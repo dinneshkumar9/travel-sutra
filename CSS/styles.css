@@ -84,7 +84,7 @@ header {
 /* ==== 3. Hero Section ==== */
 #hero {
   position: relative;
-  background: url("../Images/hero.jpg") center/cover no-repeat;
+  background: url("../images/hero.jpg") center/cover no-repeat;
   height: 80vh;
   display: flex;
   align-items: center;
