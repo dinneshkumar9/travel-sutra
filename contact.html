@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>TravelSutra – Contact</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar container">
+        <a href="index.html" class="logo">TravelSutra</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <section id="contact" class="container scroll-reveal">
+      <h2>Custom Travel Inquiry</h2>
+      <form
+        action="mailto:yourname@protonmail.com"
+        method="post"
+        enctype="text/plain"
+      >
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Tell us about your dream trip…"
+          required
+        ></textarea>
+        <button type="submit">Send Inquiry</button>
+      </form>
+    </section>
+
+    <script src="js/common.js"></script>
+  </body>
+</html>

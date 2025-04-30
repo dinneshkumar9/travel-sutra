@@ -1,0 +1,42 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // 1) Trip cost calculator
+    const form = document.getElementById('costForm');
+    if (form) {
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const t = +document.getElementById('travelers').value;
+        const d = +document.getElementById('days').value;
+        const c = +document.getElementById('costPerPerson').value;
+        const total = t * d * c;
+        document.getElementById('result').textContent =
+          `Total Trip Cost: $${total.toFixed(2)}`;
+      });
+    }
+  
+    // 2) Hamburger toggle for mobile
+    const burger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (burger && navLinks) {
+      burger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+      });
+    }
+  
+    // 3) Staggered scroll-reveal
+    const reveals = document.querySelectorAll('.scroll-reveal');
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-active');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+  
+    reveals.forEach((el, i) => {
+      el.style.transitionDelay = `${i * 150}ms`;
+      observer.observe(el);
+    });
+  });
+
+ 

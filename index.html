@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>TravelSutra – Home</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar container">
+        <a href="index.html" class="logo">TravelSutra</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <section id="hero" class="scroll-reveal">
+      <div class="hero-content">
+        <h1>Your Dream Trip Awaits</h1>
+        <button class="btn" onclick="location.href='#calculator'">
+          Calculate Cost
+        </button>
+      </div>
+    </section>
+
+    <section id="features" class="container scroll-reveal">
+      <h2>Why Choose TravelSutra?</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="Images/icon-support.svg" alt="24/7 Support" />
+          <h3>24/7 Support</h3>
+          <p>We’re always here to help, wherever you roam.</p>
+        </div>
+        <div class="card">
+          <img src="Images/icon-price.svg" alt="Best Prices" />
+          <h3>Best Prices</h3>
+          <p>We beat competitor quotes or match them, guaranteed.</p>
+        </div>
+        <div class="card">
+          <img src="Images/icon-expert.svg" alt="Expert Guides" />
+          <h3>Expert Guides</h3>
+          <p>Local guides who know all the hidden gems.</p>
+        </div>
+      </div>
+    </section>
+    <section id="gallery" class="container scroll-reveal">
+      <h2>Our Top Destinations</h2>
+      <div class="gallery-grid">
+        <img src="Images/destination1.jpg" alt="Beautiful beach" />
+        <img src="Images/destination2.jpg" alt="Mountain view" />
+        <img src="Images/destination3.jpg" alt="City skyline" />
+        <img src="Images/destination4.jpg" alt="Countryside retreat" />
+      </div>
+    </section>
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <img class="lightbox-img" src="" alt="Enlarged destination" />
+      <div class="lightbox-controls">
+        <button class="lightbox-prev" aria-label="Previous">&#10094;</button>
+        <button class="lightbox-next" aria-label="Next">&#10095;</button>
+      </div>
+    </div>
+    <section id="calculator" class="container scroll-reveal">
+      <h2>Trip Cost Calculator</h2>
+      <form id="costForm">
+        <input
+          type="number"
+          id="travelers"
+          placeholder="Number of Travelers"
+          min="1"
+          required
+        />
+        <input
+          type="number"
+          id="days"
+          placeholder="Number of Days"
+          min="1"
+          required
+        />
+        <input
+          type="number"
+          id="costPerPerson"
+          placeholder="Cost Per Person Per Day (USD)"
+          min="0"
+          required
+        />
+        <button type="submit">Calculate</button>
+      </form>
+      <p id="result"></p>
+    </section>
+
+    <script src="js/common.js"></script>
+    <script src="js/lightbox.js"></script>
+  </body>
+</html>
