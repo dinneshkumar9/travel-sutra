@@ -128,8 +128,8 @@ header {
 
 .gallery-grid img {
   width: 100%;
-  height: 200px; 
-  object-fit: cover; 
+  height: 200px;
+  object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -222,6 +222,11 @@ input,
 textarea,
 button {
   padding: 0.75rem;
+  font-size: 1rem;
+}
+::placeholder {
+  font-family: "Montserrat", sans-serif;
+  color: #888;
   font-size: 1rem;
 }
 input:focus,
