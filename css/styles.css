@@ -241,9 +241,15 @@ button {
   cursor: pointer;
   transition: background 0.2s ease;
 }
-button:hover {
-  background: var(--accent-hover);
-  color: #000;
+
+@keyframes glowPulse {
+  0%   { box-shadow: 0 0 0px var(--accent); }
+  50%  { box-shadow: 0 0 40px var(--accent); }
+  100% { box-shadow: 0 0 0px var(--accent); }
+}
+
+.glow-effect {
+  animation: glowPulse 0.8s ease;
 }
 
 /* ==== 6. Scroll‐Reveal Base ==== */

@@ -8,6 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const d = +document.getElementById('days').value;
         const c = +document.getElementById('costPerPerson').value;
         const total = t * d * c;
+        const calcButton = form.querySelector("button[type='submit']");
+        if (calcButton) {
+          calcButton.classList.add("glow-effect");
+          setTimeout(() => {
+            calcButton.classList.remove("glow-effect");
+          }, 800);
+        }
         document.getElementById('result').textContent =
           `Total Trip Cost: $${total.toFixed(2)}`;
       });
@@ -38,5 +45,3 @@ document.addEventListener('DOMContentLoaded', () => {
       observer.observe(el);
     });
   });
-
- 
