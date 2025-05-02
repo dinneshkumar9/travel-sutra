@@ -84,23 +84,17 @@ header {
 /* ==== 3. Hero Section ==== */
 #hero {
   position: relative;
-  background: url("../images/hero.jpg") center/cover no-repeat;
+  background: linear-gradient(
+    to bottom right,
+    rgba(30, 144, 255, 0.6),
+    rgba(0, 0, 139, 0.6)
+  );
   height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #fff;
-}
-#hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom right,
-    rgba(30, 144, 255, 0.6),
-    rgba(0, 0, 139, 0.6)
-  );
 }
 .hero-content {
   position: relative;
@@ -243,9 +237,15 @@ button {
 }
 
 @keyframes glowPulse {
-  0%   { box-shadow: 0 0 0px var(--accent); }
-  50%  { box-shadow: 0 0 40px var(--accent); }
-  100% { box-shadow: 0 0 0px var(--accent); }
+  0% {
+    box-shadow: 0 0 0px var(--accent);
+  }
+  50% {
+    box-shadow: 0 0 40px var(--accent);
+  }
+  100% {
+    box-shadow: 0 0 0px var(--accent);
+  }
 }
 
 .glow-effect {
@@ -299,7 +299,11 @@ button {
     top: 100%;
     left: 0;
     right: 0;
-    background: linear-gradient(to bottom, var(--primary), var(--accent)) !important;
+    background: linear-gradient(
+      to bottom,
+      var(--primary),
+      var(--accent)
+    ) !important;
     flex-direction: column;
     align-items: center;
     max-height: 0;
@@ -315,7 +319,7 @@ button {
     padding: 0.25rem 0.5rem;
     text-shadow: none !important;
   }
-  
+
   .hamburger {
     display: flex;
   }
