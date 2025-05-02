@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1) Trip cost calculator
+    // Trip cost calculator functionality
     const form = document.getElementById('costForm');
     if (form) {
       form.addEventListener('submit', e => {
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   
-    // 2) Hamburger toggle for mobile
+    // Hamburger toggle for mobile
     const burger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     if (burger && navLinks) {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   
-    // 3) Staggered scroll-reveal
+    // Staggered scroll-reveal
     const reveals = document.querySelectorAll('.scroll-reveal');
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {

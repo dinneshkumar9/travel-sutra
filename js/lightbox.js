@@ -1,4 +1,4 @@
- // ==== Lightbox Functionality ====
+ //  Lightbox Functionality 
  const galleryImages = document.querySelectorAll('.gallery-grid img');
  const lightbox       = document.getElementById('lightbox');
  const lightboxImg    = document.querySelector('.lightbox-img');
@@ -13,18 +13,18 @@
    lightbox.style.display = 'flex';
  }
  
- // open on click
+ // open picture on click
  galleryImages.forEach((img, i) =>
    img.addEventListener('click', () => showLightbox(i))
  );
  
- // close handlers
+ // close picture handlers
  closeBtn.addEventListener('click', () => lightbox.style.display = 'none');
  lightbox.addEventListener('click', e => {
    if (e.target === lightbox) lightbox.style.display = 'none';
  });
  
- // prev/next
+ // previous and next picture handlers
  prevBtn.addEventListener('click', () => {
    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
    lightboxImg.src = galleryImages[currentIndex].src;
